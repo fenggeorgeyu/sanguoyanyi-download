@@ -7,12 +7,14 @@ if not os.path.exists('mp3'):
 fname="sanguo-list.txt"
 file=open(fname,'r')
 for line in file:
-    line=line[:-1]
-    print('Downloading: '+line)
-    line=urllib.quote(line)
-    url='http://yuankuocheng1.zgpingshu.com/%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89/%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89'+line+'.mp3'
-    urllib.urlretrieve(url,'mp3/'+urllib.unquote(line)+'.mp3')
-    print('Complete.')
+    line=line[:-1]    
+    url='http://yuankuocheng1.zgpingshu.com/%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89/%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89'+urllib.quote(line)+'.mp3'
+    if not os.path.isfile('mp3/'+line+'.mp3'):
+        print('Downloading: '+line)
+        urllib.urlretrieve(url,'mp3/'+line+'.mp3')
+        print('Complete.')
+    else:
+        print('mp3/'+line+'.mp3 exists')
 
 print('All downloading complete')
 
