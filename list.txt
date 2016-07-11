@@ -1,3 +1,5 @@
+prefix=http://yuankuocheng2.zgpingshu.com/%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89/%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89
+
 001回-鞭督邮刘备走代州
 002回-竖宦作乱董卓进京
 003回-杀丁原认贼做父
